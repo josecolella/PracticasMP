@@ -1,0 +1,15 @@
+Matriz2D_1 EliminaFilaMatriz2D_1 (Matriz2D_1 matriz, int fils, int cols, int fila_borrar)
+{
+	Matriz2D_1 reducida = CreaMatriz2D_1 (fils-1, cols);
+
+	int fila_reducida = 0;
+	for (int f=0; f<fila_borrar; f++, fila_reducida++) 
+		memcpy (reducida[fila_reducida], matriz[f], cols*sizeof(int));
+	for (int f=fila_borrar+1; f<fils; f++, fila_reducida++) 
+		memcpy (reducida[fila_reducida], matriz[f], cols*sizeof(int));
+
+	return (reducida);
+}
+ 
+                
+ 

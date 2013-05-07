@@ -1,0 +1,4 @@
+$@ Nombre del fichero destino de la regla
+$< Nombre de la primera dependencia de la regla
+$^ Equivale a todas las dependencias de la regla
+$? Equivale a las dependencias de la regla mas nuevas que el destino

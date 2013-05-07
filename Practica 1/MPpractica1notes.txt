@@ -1,0 +1,8 @@
+Inclusion de ficheros
+
+El nombre del fichero puede especificarse de dos formas:
+
+#include <> -> encuentra en alguno de los directorios de ficheros
+de cabecera del sistema
+#include "" -> indica que se encuentra en el directorio donde se
+esta realizando la compilacion

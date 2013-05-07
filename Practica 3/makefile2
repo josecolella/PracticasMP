@@ -1,0 +1,26 @@
+INCLUDE = include
+BIN = bin
+LIB = lib
+SRC = src
+OBJ = obj
+LIBPATH = -L./lib
+INCPATH = -I./include
+.PHONY = clean
+
+all: $(BIN)/ppal_2
+
+$(BIN)/ppal_2: $(OBJ)/ppal_2.o $(OBJ)/producto.o $(OBJ)/adicion.o
+	g++ $^ -o $@
+
+$(OBJ)/ppal_2.o: $(SRC)/ppal_2.cpp
+	g++ -c $(HEADERPATH) $< -o $@
+
+$(OBJ)/adicion.o: $(SRC)/adicion.cpp
+	g++ -c $(HEADERPATH) $< -o $@
+
+$(OBJ)/producto.o: $(SRC)/producto.cpp
+	g++ -c $(HEADERPATH) $< -o $@
+
+
+clean:
+	rm $(OBJ)/* 

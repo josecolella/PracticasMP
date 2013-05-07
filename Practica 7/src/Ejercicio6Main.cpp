@@ -1,0 +1,70 @@
+/**************************
+*
+* Fichero: Ejercicio1Main.cpp
+* Autor: Jose Miguel Colella
+* Descripcion: En este fichero verifico la validez de los metodos
+* declarados para la clase Queue
+*
+*************************/
+
+
+#include <iostream>
+#include "datastructures.h"
+
+using namespace std;
+
+int main()
+{
+	Queue *q1;
+	
+	cout << endl << "Vamos a probar el constructor sin parametros" << endl;
+	
+	q1 = new Queue();
+	
+	cout << endl << "Vamos a probar el metodo isEmpty()" << endl;
+	
+	if(q1->isEmpty() == false)
+		cout << endl <<"La cola no esta vacia" << endl;
+	else
+		cout  << endl << "La cola esta vacia" << endl;
+	
+	cout << endl << "Vamos a probar el metodo enqueue(5)" << endl;
+	
+	q1->enqueue(5);
+	
+	cout << endl << "Vamos a probar el metodo printQueue()" << endl;
+	
+	q1->printQueue();
+	
+	cout << endl << "Vamos a probar el metodo enqueue(7)" << endl;
+	
+	q1->enqueue(7);
+	
+	q1->printQueue();
+	cout << endl << "Vamos a probar el metodo enqueue(8)" << endl;
+	
+	q1->enqueue(8);
+	
+	q1->printQueue();
+	
+	cout << endl << "Vamos a probar el metodo dequeue()" << endl;
+	
+	q1->dequeue();
+	
+	q1->printQueue();
+	
+	cout << endl << "Vamos a probar el metodo dequeue()" << endl;
+	
+	q1->dequeue();
+	
+	q1->printQueue();
+	
+	cout << endl << "Vamos a probar el metodo front()" << endl;
+	
+	cout << endl << "El elemento en frente de la cola es: (" << q1->front() << ")" << endl;
+	
+	///////////////////////////////////////////////
+	
+	return 0;
+	
+}
